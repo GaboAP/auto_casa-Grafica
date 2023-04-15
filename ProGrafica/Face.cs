@@ -34,7 +34,7 @@ namespace ProGrafica
             this.color = color;
             this.shape = shape;
         }
-        public virtual void Draw(Vector3d center)
+        public virtual void draw(Vector3d center)
         {
             GL.Begin(this.shape);
             GL.Color3(this.color);

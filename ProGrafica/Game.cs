@@ -39,7 +39,7 @@ namespace ProGrafica
             GL.Rotate(theta, 0.0, 1.0, 0.0);
 
             //-----------------------------CASA-------------------------------
-            Object casa = new Object(0.0,0.0,0.0);
+            Object casa = new Object(0.5,2.0,0.0); //Se introduce el punto centro del Objeto
             Face triangulo1 = new Face(Color.BurlyWood,PrimitiveType.Triangles);
                 triangulo1.addVertex(new Double[] { -0.5, -0.5, 0.0 }); //Punto izq abajo
                 triangulo1.addVertex(new Double[] { 0.5, -0.5, 0.0 });  //punto derecha abajo
@@ -93,10 +93,10 @@ namespace ProGrafica
             casa.addFace(paredBack);
             casa.addFace(paredIzq);
             casa.addFace(paredDer);
-            casa.draw();
+            //casa.draw();
             //-----------------------------CASA-------------------------------
             //-----------------------------AUTO-------------------------------
-            Object auto = new Object(1.5, -0.80, 0.0);
+            Object auto = new Object(1.5, -0.80, 0.0); //Se introduce el punto centro del objeto
             Face cabinaFront = new Face(Color.FromArgb(1, 168, 204, 215), PrimitiveType.Quads);
                 cabinaFront.addVertex(new Double[] { -0.4,-0.5,-0.25 }); //Arri, izq, atras
                 cabinaFront.addVertex(new Double[] { -0.4, -0.75, 0.0 });//Abajo, izq, adelante
@@ -159,19 +159,26 @@ namespace ProGrafica
             auto.addFace(rueditaFrontDer);
             auto.addFace(rueditaBackDer);
             auto.addFace(rueditaBackIzq);
-            auto.draw();
+            //auto.draw();
+            Scene casaAuto = new Scene();
+            Object auto2 = new Object(auto);
+            auto2.CenterX = -1.5;
+            casaAuto.Add(auto);
+            casaAuto.Add(casa);
+            //casaAuto.Add(auto2);
+            casaAuto.Draw();
             //-----------------------------AUTO-------------------------------
             GL.Begin(PrimitiveType.Lines);
 
-                GL.Color3(Color.Red);
+                GL.Color3(Color.Red); //Eje X
                 GL.Vertex3(-20, 0, 0);
-                GL.Vertex3(20, 0, 0);
+                GL.Vertex3(20, 0, 0); 
 
-                GL.Color3(Color.Blue);
+                GL.Color3(Color.Blue); //Eje Y
                 GL.Vertex3(0, -20, 0);
                 GL.Vertex3(0, 20, 0);
 
-                GL.Color3(Color.Green);
+                GL.Color3(Color.Green); //Eje Z
                 GL.Vertex3(0, 0, -500);
                 GL.Vertex3(0, 0, 500);
 

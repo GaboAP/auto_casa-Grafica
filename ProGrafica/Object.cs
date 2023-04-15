@@ -32,6 +32,14 @@ namespace ProGrafica
             this.height = height;
             this.length = length;
         }
+        public Object(Object Objeto)
+        {
+            this.faces= Objeto.faces;
+            this.center = Objeto.center;
+            this.height = Objeto.height;
+            this.length = Objeto.length;
+            this.width = Objeto.width;
+        }
         public Face[] Faces
         {
             get{ return Faces.ToArray(); }
@@ -58,15 +66,15 @@ namespace ProGrafica
         }
         public void addFace(Face face)
         {
-            this.faces.Add(face);
+            this.faces.Add(face); //añadir cara a la lista de caras "faces"
         }
         public void draw()
         {
-            if (this.faces.Count != 0)
+            if (this.faces.Count != 0) //Verifica si la lista caras NO está vacía
             {
-                foreach (Face face in this.faces)
+                foreach (Face cara in this.faces) //para cada cara en la lista de caras "faces"
                 {
-                    face.Draw(center);
+                    cara.draw(center);  //Dibujarla
                 }
             } 
         }

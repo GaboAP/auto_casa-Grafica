@@ -27,7 +27,7 @@ namespace ProGrafica
 
 
         override
-        public void Draw(Vector3d centerObject)
+        public void draw(Vector3d centerObject)
         {
             GL.Begin(this.shape);
             GL.Color3(this.color);
