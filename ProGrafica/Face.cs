@@ -7,14 +7,18 @@ using System.Drawing;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Graphics;
+using Newtonsoft.Json;
 
 namespace ProGrafica
 {
     internal class Face
     {
-        protected List<Double[]> vertices;
-        protected Color color;
-        protected PrimitiveType shape;
+        [JsonProperty("vertices")]
+        protected List<Double[]> vertices { get; set; }
+        [JsonProperty("color")]
+        protected Color color { get; set; }
+        [JsonProperty("shape")]
+        protected PrimitiveType shape { get; set; }
 
         public Face()
         {

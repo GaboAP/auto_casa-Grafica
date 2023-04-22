@@ -1,0 +1,63 @@
+/* Object auto = new Object(1.5,1.2, 0.0); //Se introduce el punto centro del objeto
+           Face cabinaFront = new Face(Color.FromArgb(1, 168, 204, 215), PrimitiveType.Quads);
+                cabinaFront.addVertex(new Double[] { -0.4,-0.5,-0.25 }); //Arri, izq, atras
+                cabinaFront.addVertex(new Double[] { -0.4, -0.75, 0.0 });//Abajo, izq, adelante
+                cabinaFront.addVertex(new Double[] { -0.2, -0.75, 0.0 });//Abajo, der, adelante
+                cabinaFront.addVertex(new Double[] { -0.2, -0.5, -0.25 });//Arri, der, atras
+            Face cabinaBack = new Face(Color.FromArgb(1, 168, 204, 215), PrimitiveType.Quads);
+                cabinaBack.addVertex(new Double[] { -0.4, -0.5, -0.75 }); //izq, arriba, adelante
+                cabinaBack.addVertex(new Double[] { -0.4, -0.75, -1.0 }); //izq, abajo, atras
+                cabinaBack.addVertex(new Double[] { -0.2, -0.75, -1.0 }); //der, abajo, atras
+                cabinaBack.addVertex(new Double[] { -0.2, -0.5, -0.75 }); //der, arriba, adelante
+            Face cabinaIzq = new Face(Color.FromArgb(1,170,51,51),PrimitiveType.Quads);
+                cabinaIzq.addVertex(new Double[] { -0.4, -0.5, -0.25 }); //A
+                cabinaIzq.addVertex(new Double[] { -0.40, -0.75, 0.0 });//B
+                cabinaIzq.addVertex(new Double[] { -0.4, -0.75, -1.0 });//C
+                cabinaIzq.addVertex(new Double[] { -0.4, -0.5, -0.75 });//D
+            Face cabinaDer = new Face(Color.FromArgb(1, 170, 51, 51), PrimitiveType.Quads);
+                cabinaDer.addVertex(new Double[] { -0.2, -0.5, -0.25 }); //A
+                cabinaDer.addVertex(new Double[] { -0.2, -0.75, 0.0 }); //B
+                cabinaDer.addVertex(new Double[] { -0.2, -0.75, -1.0 });//C
+                cabinaDer.addVertex(new Double[] { -0.2, -0.5, -0.75 });//D
+            Face carrosaIzq = new Face(Color.FromArgb(1, 170, 51, 51), PrimitiveType.Quads);
+                carrosaIzq.addVertex(new Double[] { -0.40, -0.75, 0.0 }); //A
+                carrosaIzq.addVertex(new Double[] { -0.40, -1.05, 0.0 }); //B
+                carrosaIzq.addVertex(new Double[] { -0.40, -1.05, -1.0 });//C
+                carrosaIzq.addVertex(new Double[] { -0.40, -0.75, -1.0 });//D
+            Face carrosaFront = new Face(Color.FromArgb(1, 170, 51, 51), PrimitiveType.Quads);
+                carrosaFront.addVertex(new Double[] { -0.40, -0.75, 0.0 }); //A
+                carrosaFront.addVertex(new Double[] { -0.40, -1.05, 0.0 }); //B
+                carrosaFront.addVertex(new Double[] { -0.20, -1.05, 0.0 }); //C
+                carrosaFront.addVertex(new Double[] { -0.20, -0.75, 0.0 }); //D
+            Face carrosaBack = new Face(Color.FromArgb(1, 170, 51, 51), PrimitiveType.Quads);
+                carrosaBack.addVertex(new Double[] { -0.40, -0.75, -1.0 }); //A
+                carrosaBack.addVertex(new Double[] { -0.40, -1.05, -1.0 }); //B
+                carrosaBack.addVertex(new Double[] { -0.20, -1.05, -1.0 }); //C
+                carrosaBack.addVertex(new Double[] { -0.20, -0.75, -1.0 }); //D
+            Face carrosaDer = new Face(Color.FromArgb(1, 170, 51, 51), PrimitiveType.Quads);
+                carrosaDer.addVertex(new Double[] { -0.20, -0.75, 0.0 }); //A
+                carrosaDer.addVertex(new Double[] { -0.20, -1.05, 0.0 }); //B
+                carrosaDer.addVertex(new Double[] { -0.20, -1.05, -1.0 });//C
+                carrosaDer.addVertex(new Double[] { -0.20, -0.75, -1.0 });//D
+            Face techo= new Face(Color.FromArgb(1, 170, 51, 51), PrimitiveType.Quads);
+                techo.addVertex(new Double[] { -0.4, -0.5, -0.75 }); //A
+                techo.addVertex(new Double[] { -0.4, -0.5, -0.25 }); //B
+                techo.addVertex(new Double[] { -0.2, -0.5, -0.25 }); //C
+                techo.addVertex(new Double[] { -0.2, -0.5, -0.75 });
+            Circle rueditaFrontIzq = new Circle(0.15, "yz", new double[] { -0.41, -1.0, -0.20 }, Color.Orange
+            Circle rueditaFrontDer = new Circle(0.15, "yz", new double[] { -0.19, -1.0, -0.20 }, Color.Orange);
+            Circle rueditaBackIzq = new Circle(0.15, "yz", new double[] { -0.41, -1.0, -0.75 }, Color.Orange);
+            Circle rueditaBackDer = new Circle(0.15, "yz", new double[] { -0.19, -1.0, -0.75 }, Color.Orange);
+            auto.addFace("paraBrisasFront",cabinaFront);
+            auto.addFace("paraBrisasBack", cabinaBack);  
+            auto.addFace("ventanaIzq", cabinaIzq);
+            auto.addFace("ventanaDer", cabinaDer);
+            auto.addFace("carrosaIzq", carrosaIzq);
+            auto.addFace("carrosaFront", carrosaFront);
+            auto.addFace("carrosaBack", carrosaBack);
+            auto.addFace("carrosaDer", carrosaDer);
+            auto.addFace("techo",techo);
+            auto.addFace("rueda1",rueditaFrontIzq);
+            auto.addFace("rueda2", rueditaFrontDer);
+            auto.addFace("rueda4", rueditaBackDer);
+            auto.addFace("rueda3", rueditaBackIzq);*/

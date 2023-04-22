@@ -4,36 +4,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ProGrafica
 {
     internal class Scene
     {
-        List<Object> objects;
+        [JsonProperty("objects")]
+        public Dictionary<String, Object> objects{ get; set; }
         public Scene()
         {
-            objects = new List<Object>();
+            objects = new Dictionary<String, Object>();
         }
-        public void Add(Object objeto)
+        public void Add(String descripción, Object objeto)
         {
-            this.objects.Add(objeto);
+            this.objects.Add(descripción, objeto);
+            
         }
-        public void Remove(Object objeto)
+        public void Remove(String descripcion)
         {
-            this.objects.Remove(objeto);
+            this.objects.Remove(descripcion);
         }
         public void Clear() { 
-            this.objects = new List<Object>();
+            this.objects = new Dictionary<String, Object>();
         }
         public void Draw()
         {
-            if (this.objects.Count!=0)
+            foreach (var objeto in objects)
             {
-
-            }
-            foreach (Object objeto in objects)
-            {
-                objeto.draw();
+                objeto.Value.draw();
             }
         }
     }

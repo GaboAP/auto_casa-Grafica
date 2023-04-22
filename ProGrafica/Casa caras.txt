@@ -1,0 +1,54 @@
+/*Object casa = new Object(0.0,2.0,0.0); //Se introduce el punto centro del Objeto
+            Face triangulo1 = new Face(Color.BurlyWood,PrimitiveType.Triangles);
+                triangulo1.addVertex(new Double[] { -0.5, -0.5, 0.0 }); //Punto izq abajo
+                triangulo1.addVertex(new Double[] { 0.5, -0.5, 0.0 });  //punto derecha abajo
+                triangulo1.addVertex(new Double[] { 0.0, 0.5, 0.0 });   //Punto cima
+            Face triangulo2 = new Face(Color.BurlyWood, PrimitiveType.Triangles);
+                triangulo2.addVertex(new Double[] { -0.5, -0.5, -2.0 }); //Punto izq abajo
+                triangulo2.addVertex(new Double[] { 0.5, -0.5, -2.0 });  //Punto der abajo
+                triangulo2.addVertex(new Double[] { 0.0, 0.5, -2.0 });  //Punto cima
+            Face rectDer = new Face(Color.Firebrick, PrimitiveType.Quads);
+                rectDer.addVertex(new Double[] { 0.0, 0.5, 0.0 });  //A
+                rectDer.addVertex(new Double[] { 0.5, -0.5, 0.0 }); //B
+                rectDer.addVertex(new Double[] { 0.5, -0.5, -2.0 });//C
+                rectDer.addVertex(new Double[] { 0.0, 0.5, -2.0 }); //D
+            Face rectIzq = new Face(Color.Firebrick, PrimitiveType.Quads);
+                rectDer.addVertex(new Double[] { 0.0, 0.5, 0.0 }); //A
+                rectDer.addVertex(new Double[] { -0.5, -0.5, 0.0 }); //B
+                rectDer.addVertex(new Double[] { -0.5, -0.5, -2.0 });//C
+                rectDer.addVertex(new Double[] { 0.0, 0.5, -2.0 });  //D
+            Face paredFront = new Face(Color.WhiteSmoke, PrimitiveType.Quads);
+                paredFront.addVertex(new Double[] { -0.5, -0.5, 0.0 }); //A
+                paredFront.addVertex(new Double[] { -0.5, -2.0, 0.0}); //B
+                paredFront.addVertex(new Double[] { 0.5, -2.0, 0.0 }); //C
+                paredFront.addVertex(new Double[] { 0.5, -0.5, 0.0 }); //D
+            Face puerta= new Face(Color.FromArgb(1,128,64,0), PrimitiveType.Quads);
+                puerta.addVertex(new Double[] { -0.25, -1.0, 0.01 }); //A
+                puerta.addVertex(new Double[] { -0.25, -2.0, 0.01 }); //B
+                puerta.addVertex(new Double[] { 0.25, -2.0, 0.01 }); //C
+                puerta.addVertex(new Double[] { 0.25, -1.0, 0.01 }); //D
+            Face paredBack = new Face(Color.WhiteSmoke, PrimitiveType.Quads);
+                paredBack.addVertex(new Double[] { -0.5, -0.5, -2.0 }); //A
+                paredBack.addVertex(new Double[] { -0.5, -2.0, -2.0 }); //B
+                paredBack.addVertex(new Double[] { 0.5, -2.0, -2.0 }); //C
+                paredBack.addVertex(new Double[] { 0.5, -0.5, -2.0 }); //D
+            Face paredIzq = new Face(Color.WhiteSmoke, PrimitiveType.Quads);
+                paredIzq.addVertex(new Double[] { -0.5, -0.5, 0.0 });  //A
+                paredIzq.addVertex(new Double[] { -0.5, -2.0, 0.0 });  //B
+                paredIzq.addVertex(new Double[] { -0.5, -2.0, -2.0 });  //C
+                paredIzq.addVertex(new Double[] { -0.5, -0.5, -2.0 }); //D
+            Face paredDer = new Face(Color.WhiteSmoke, PrimitiveType.Quads);
+                paredDer.addVertex(new Double[] { 0.5,-0.5,0.0 });
+                paredDer.addVertex(new Double[] { 0.5,-2.0,0.0 });
+                paredDer.addVertex(new Double[] { 0.5,-2.0,-2.0 });
+                paredDer.addVertex(new Double[] { 0.5,-0.5,-2.0 });
+            
+            casa.addFace("TechoFront",triangulo1);
+            casa.addFace("TechoBack",triangulo2);
+            casa.addFace("TechoIzq",rectDer);
+            casa.addFace("TechoDer",rectIzq);
+            casa.addFace("ParedFront",paredFront);
+            casa.addFace("Puerta",puerta);
+            casa.addFace("ParedBack",paredBack);
+            casa.addFace("ParedIzq",paredIzq);
+            casa.addFace("ParedDer", paredDer);*/

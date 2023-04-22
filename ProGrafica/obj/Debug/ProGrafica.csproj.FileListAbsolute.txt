@@ -10,3 +10,33 @@ C:\Users\gabri\source\repos\ProGrafica\ProGrafica\obj\Debug\ProGrafica.exe
 C:\Users\gabri\source\repos\ProGrafica\ProGrafica\obj\Debug\ProGrafica.pdb
 C:\Users\gabri\source\repos\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.AssemblyReference.cache
 C:\Users\gabri\source\repos\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabri\source\repos\ProGrafica\ProGrafica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gabri\source\repos\ProGrafica\ProGrafica\bin\Debug\Newtonsoft.Json.xml
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\ProGrafica.exe.config
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\ProGrafica.exe
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\ProGrafica.pdb
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\Newtonsoft.Json.dll
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\OpenTK.dll
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\Newtonsoft.Json.xml
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\OpenTK.pdb
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\bin\Debug\OpenTK.xml
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.AssemblyReference.cache
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.SuggestedBindingRedirects.cache
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.CoreCompileInputs.cache
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.CopyComplete
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\obj\Debug\ProGrafica.exe
+C:\Gabo\Universidad\9no Semestre\Grafica\ProGrafica\ProGrafica\obj\Debug\ProGrafica.pdb
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\ProGrafica.exe.config
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\ProGrafica.exe
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\ProGrafica.pdb
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\OpenTK.dll
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\OpenTK.pdb
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\bin\Debug\OpenTK.xml
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.AssemblyReference.cache
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.SuggestedBindingRedirects.cache
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\obj\Debug\ProGrafica.csproj.CopyComplete
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\obj\Debug\ProGrafica.exe
+C:\Users\gabri\Desktop\ProGrafica\ProGrafica\obj\Debug\ProGrafica.pdb

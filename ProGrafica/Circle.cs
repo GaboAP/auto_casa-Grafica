@@ -8,24 +8,34 @@ using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Graphics;
 using System.Diagnostics.Eventing.Reader;
+using Newtonsoft.Json;
 
 namespace ProGrafica
 {
-    internal class Circle:Face
+    internal class Circle : Face
     {
-        private Double radius;
-        private string plano;
-        private Double[] center;
+        [JsonProperty("radius")]
+        private Double radius { get; set; }
+        [JsonProperty("plano")]
+        private string plano { get; set; }
+        [JsonProperty("center")]
+        private Double[] center { get; set; }
 
-       public Circle(double radius, string plano, Double[] center, Color color) : 
-            base(color, PrimitiveType.TriangleFan)
+        public Circle() : base()
+        {
+            this.radius = 0.0;
+            this.plano = "";
+            this.center = new Double[3];
+        }
+
+        public Circle(double radius, string plano, Double[] center, Color color) :
+             base(color, PrimitiveType.TriangleFan)
         {
             this.radius = radius;
             this.plano = plano;
             this.center = center;
         }
-
-
+        
         override
         public void draw(Vector3d centerObject)
         {
