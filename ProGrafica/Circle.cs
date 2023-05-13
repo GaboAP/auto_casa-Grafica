@@ -19,21 +19,44 @@ namespace ProGrafica
         [JsonProperty("plano")]
         private string plano { get; set; }
         [JsonProperty("center")]
-        private Double[] center { get; set; }
+        private Vector3d center { get; set; }
 
         public Circle() : base()
         {
             this.radius = 0.0;
             this.plano = "";
-            this.center = new Double[3];
+            this.center = new Vector3d();
         }
 
-        public Circle(double radius, string plano, Double[] center, Color color) :
+        [JsonConstructor]
+        public Circle(String descripcion, double radius, string plano, Vector3d center, Color color) :
              base(color, PrimitiveType.TriangleFan)
         {
             this.radius = radius;
             this.plano = plano;
             this.center = center;
+            for (int i = 0; i < 360; i++)
+            {
+                descripcion += i;
+                if (plano.Equals("yz"))
+                {
+                    this.vertices.Add(descripcion, new Vector3d(center.X,
+                                                    center.Y + Math.Cos(i) * this.radius,
+                                                    center.Z + Math.Sin(i) * this.radius));
+                }
+                else if (plano.Equals("xz"))
+                {
+                    this.vertices.Add(descripcion,new Vector3d ( center.X + Math.Cos(i) * this.radius,
+                                                     center.Y,
+                                                     center.Z + Math.Sin(i) * this.radius ));
+                }
+                else if (plano.Equals("xy"))
+                {
+                    this.vertices.Add(descripcion,new Vector3d( center[0] + Math.Cos(i) * this.radius,
+                                                    center[1] + Math.Sin(i) * this.radius,
+                                                    center[2] ));
+                }
+            }
         }
         
         override
@@ -44,31 +67,42 @@ namespace ProGrafica
             Double cX = centerObject.X;
             Double cY = centerObject.Y;
             Double cZ = centerObject.Z;
-            GL.Vertex3(cX + center[0], cY + center[1], cZ + center[2]);
-            for (int i = 0; i < 360; i++)
+            //GL.Vertex3(cX + center[0], cY + center[1], cZ + center[2]);
+            foreach (var punto in vertices)
             {
-                if (plano.Equals("yz"))
+                GL.Vertex3(cX + punto.Value.X,
+                                cY + punto.Value.Y,
+                                cZ + punto.Value.Z);
+                /*if (plano.Equals("yz"))
                 {
-                    GL.Vertex3( cX + center[0], 
-                                cY + center[1] + Math.Cos(i) * this.radius,
-                                cZ + center[2] + Math.Sin(i) * this.radius);
+                    
                 }
                 else if (plano.Equals("xz"))
                 {
-                    GL.Vertex3( cX + center[0] + Math.Cos(i) * this.radius,
-                                cY + center[1], 
-                                cZ + center[2] + Math.Sin(i) * this.radius);
+                    GL.Vertex3(cX + punto[0],
+                                cY + punto[1],
+                                cZ + punto[2]);
                 }
                 else if (plano.Equals("xy"))
                 {
-                    GL.Vertex3( cX + center[0] + Math.Cos(i) * this.radius, 
-                                cY + center[1] + Math.Sin(i) * this.radius, 
-                                cZ + center[2]);
-                }
+                    GL.Vertex3( cX + punto[0], 
+                                cY + punto[1], 
+                                cZ + punto[2]);
+                }*/
             }
-
             GL.End();
 
+        }
+
+        override
+        public void rotate(Vector3d eje, Double theta){
+            foreach (var vector in vertices.ToList())
+            {
+                String key = vector.Key;
+                Vector3d vi = new Vector3d(vector.Value.X, vector.Value.Y, vector.Value.Z);
+                vi = formulaRodriguez(eje, vi, theta);
+                this.vertices[key] = vi;
+            }
         }
     }
 }
